@@ -27,16 +27,27 @@ This project allows registered users to view products while the admin can manage
 
 ## 📁 Project Structure
 Django-e-commerce-Project/
+
 ├── firstProject/                  # Main project configuration
+
 │   ├── __init__.py
+
 │   ├── asgi.py
+
 │   ├── settings.py               # Project settings
+
 │   ├── urls.py                   # URL routing
+
 │   └── wsgi.py
+
 │
+
 ├── firstApp/                     # Main application
+
 │   ├── __init__.py
+
 │   ├── admin.py                  # Register models for Django admin
+
 │   ├── apps.py
 │   ├── models.py                 # Models for Product & Category
 │   └── views.py                  # View functions
