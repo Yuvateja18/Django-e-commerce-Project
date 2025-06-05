@@ -1,0 +1,44 @@
+{% extends 'basic.html' %}
+
+{% block main %}
+    <div class="container">
+        <div class="row m-5">
+            <div class="col-lg-6 mx-auto">
+                <div class="border shadow p-2 ">
+                            <h1 class="m-5">Login Page</h1>
+
+                            {% if error %}
+                            <div class="alert alert-danger m-5" role="alert">
+                                <strong><p style="color:red;">{{ error }}</p></strong>
+                                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+                            </div>
+                            {% endif %}
+                    <form method="post" class="m-5">
+                        {% csrf_token %}
+                        <div class="form-group m-2 card shadow p-2 ">
+
+
+                        <label>Email:</label>
+                        <input type="email" name="email" class="form-control mt-2" required><br>
+
+                        <label>Password:</label>
+                        <input type="password" name="password" class="form-control mt-2" required><br>
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-outline-dark mt-4 m-2">Login</button>
+                    
+                        <p class="m-4">Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+                    </form>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
